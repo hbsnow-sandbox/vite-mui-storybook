@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Button } from "./components/Button";
+import { Button } from "@mui/material";
+
 import { useCount } from "./hooks/useCount";
 
 export const App = () => {
@@ -10,10 +11,14 @@ export const App = () => {
     <main>
       <p>count is: {count}</p>
       <p>
-        <Button onClick={() => countUp()}>count up</Button>
+        <Button variant="contained" onClick={() => countUp()}>
+          count up
+        </Button>
       </p>
       <p>
-        <Button onClick={() => countDown()}>count down</Button>
+        <Button variant="outlined" onClick={() => countDown()}>
+          count down
+        </Button>
       </p>
     </main>
   );
